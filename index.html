@@ -1,133 +1,103 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sacha Rimay – La Voz de la Selva</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <!-- AOS (Animate on Scroll) -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-  <style>
-    :root {
-      --primary-dark: #000000; /* negro */
-      --primary-light: #00a86b; /* verde claro */
-      --accent: #007bff;       /* azul */
-      --white: #ffffff;
-      --light-bg: #f5f7fa;
-      --transition: 0.3s ease;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    body { color: var(--primary-dark); background: var(--white); line-height: 1.6; }
+<!-- ================= SERVICIOS ================= -->
+<section id="servicios">
+  <h2 class="section-title">Nuestros Servicios</h2>
+  <div class="section-content">
+    <h3>Marketing Amazónico</h3>
+    <p>
+      Diseñamos campañas de marketing con enfoque territorial y cultural. Nos especializamos en estrategias que respetan la cosmovisión de los pueblos amazónicos, conectando marcas, productos y causas con sus comunidades desde una narrativa auténtica. Ofrecemos manejo de redes sociales, branding con identidad local, activaciones comunitarias y producción de contenidos visuales adaptados al entorno.
+    </p>
+    <h3>Comunicación Estratégica</h3>
+    <p>
+      Acompañamos procesos sociales, políticos y culturales desde la comunicación transformadora. Nuestros servicios incluyen desarrollo de identidad institucional, diseño de mensajes, cobertura audiovisual, manejo de crisis, relaciones comunitarias y asesoría en campañas informativas. Trabajamos con líderes, colectivos, ONGs y gobiernos locales que buscan visibilizar su labor con ética y creatividad.
+    </p>
+    <h3>Diseño Gráfico y Multimedia</h3>
+    <p>
+      Elaboramos piezas gráficas impresas y digitales para todo tipo de públicos: afiches, brochures, ilustraciones, animaciones, cápsulas informativas y productos multimedia. Todo con identidad amazónica, inclusión de lenguas ancestrales y creatividad visual.
+    </p>
+    <h3>Producción Audiovisual</h3>
+    <p>
+      Realizamos videos institucionales, documentales, spots radiales y cápsulas para redes sociales. Nuestro equipo audiovisual trabaja en el territorio y desde la sensibilidad cultural, narrando historias que conectan con el corazón de las comunidades.
+    </p>
+    <h3>Formación y Talleres</h3>
+    <p>
+      Impartimos procesos de formación en comunicación comunitaria, liderazgo juvenil, redes sociales, oratoria y producción audiovisual. Nos enfocamos en el fortalecimiento de capacidades locales desde metodologías participativas.
+    </p>
+  </div>
+</section>
 
-    header { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(4px); color: var(--white); z-index: 999; transition: var(--transition); }
-    .nav-container { max-width: 1280px; margin: 0 auto; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
-    .nav-logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 600; font-size: 1.125rem; letter-spacing: 1px; text-transform: uppercase; color: var(--accent); }
-    .nav-logo img { height: 44px; }
-    nav ul { list-style: none; display: flex; gap: 1.75rem; }
-    nav li { position: relative; }
-    nav a { color: var(--white); text-decoration: none; font-size: 0.95rem; position: relative; }
-    nav a::after { content: ''; position: absolute; bottom: -6px; left: 0; width: 0; height: 2px; background: var(--accent); transition: var(--transition); }
-    nav a:hover::after { width: 100%; }
-    nav ul ul { display: none; position: absolute; top: 100%; left: 0; background: rgba(0,0,0,0.9); padding: 0.75rem 1rem; border-radius: 6px; }
-    nav li:hover ul { display: block; }
-    nav ul ul li { margin: 0.5rem 0; }
-    nav ul ul a { font-size: 0.9rem; color: var(--white); }
-    .menu-toggle { display: none; font-size: 1.5rem; background: none; border: none; color: var(--white); cursor: pointer; }
+<!-- ================= PORTAFOLIO ================= -->
+<section id="portafolio">
+  <h2 class="section-title">Portafolio</h2>
+  <div class="section-content">
+    <h3>Eventos Comunitarios</h3>
+    <p>
+      Hemos organizado y cubierto decenas de eventos en territorio, como ferias, festivales, capacitaciones y encuentros intercomunitarios. Cada evento es documentado con calidad y calidez, con fotos, videos y transmisiones en vivo que reflejan la esencia de cada momento.
+    </p>
+    <h3>Campañas Sociales</h3>
+    <p>
+      Desde campañas contra la violencia hasta promoción del turismo comunitario, nuestro equipo ha desarrollado proyectos de alto impacto que combinan diseño gráfico, redes sociales, radio, prensa y participación ciudadana. Siempre desde el territorio, para el territorio.
+    </p>
+  </div>
+</section>
 
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1541944743827-e04aa6427c33?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      text-align: center;
-      color: var(--white);
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-    }
-    .hero-content {
-      position: relative;
-      max-width: 800px;
-      padding: 0 1rem;
-    }
-    .hero-logo {
-      width: 160px;
-      margin: 0 auto 1.5rem;
-    }
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      line-height: 1.2;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      border-radius: 60px;
-      text-decoration: none;
-      font-weight: 600;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-      transition: var(--transition);
-    }
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-  </style>
-</head>
-<body>
-  <!-- ================= HEADER ================= -->
-  <header>
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo">
-        <img src="https://i.imgur.com/eHXbe6F.png" alt="Logo Sacha Rimay" />
-        Sacha Rimay
-      </a>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a>
-            <ul>
-              <li><a href="#hero">Bienvenida</a></li>
-            </ul>
-          </li>
-          <li><a href="#sobre">Sobre Nosotros</a>
-            <ul>
-              <li><a href="#historia">Historia</a></li>
-              <li><a href="#mision">Misión y Visión</a></li>
-            </ul>
-          </li>
-          <li><a href="#servicios">Servicios</a>
-            <ul>
-              <li><a href="#marketing">Marketing</a></li>
-              <li><a href="#comunicacion">Comunicación</a></li>
-            </ul>
-          </li>
-          <li><a href="#portafolio">Portafolio</a>
-            <ul>
-              <li><a href="#eventos">Eventos</a></li>
-              <li><a href="#campañas">Campañas</a></li>
-            </ul>
-          </li>
-          <li><a href="#equipo">Equipo</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-    </div>
-  </header>
+<!-- ================= QUIÉNES SOMOS ================= -->
+<section id="quienes-somos">
+  <h2 class="section-title">¿Quiénes Somos?</h2>
+  <div class="section-content">
+    <p>
+      Somos un colectivo creativo de comunicadores, diseñadores, educadores y líderes comunitarios con raíces en la Amazonía ecuatoriana. Nuestra fuerza nace del territorio y de las historias que en él se tejen. Trabajamos con pasión y compromiso para que las voces amazónicas sean escuchadas con respeto y dignidad.
+    </p>
+    <h3>Nuestro Equipo</h3>
+    <p>
+      Nuestro equipo está conformado por profesionales de diversas nacionalidades y saberes que combinan la experiencia técnica con el compromiso territorial. En breve conocerás a cada integrante y su historia dentro de Sacha Rimay.
+    </p>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto" style="padding: 4rem 2rem; background-color: #f5f7fa; text-align: center;">
+  <h2 class="section-title">Contáctanos</h2>
+  <form action="https://formspree.io/f/mayvlodw" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem;">
+    <input type="text" name="name" placeholder="Tu nombre" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;">
+    <input type="email" name="email" placeholder="Tu correo electrónico" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;">
+    <textarea name="message" rows="5" placeholder="Escribe tu mensaje" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+    <button type="submit" style="background-color: #00a86b; color: white; padding: 0.9rem; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">Enviar Mensaje</button>
+  </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer style="background-color: #000; color: #fff; padding: 2rem 1rem; text-align: center;">
+  <h2 style="margin-bottom: 1rem; font-size: 1.5rem; color: #00a86b;">Conecta con Nosotros</h2>
+  <div style="font-size: 1.8rem; display: flex; justify-content: center; gap: 2rem; margin-bottom: 1rem;">
+    <a href="https://www.facebook.com/share/1Acr7rSHpZ/" target="_blank" style="color: #fff; transition: 0.3s;">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.tiktok.com/@sacharimayoficial?_t=ZM-8xgvlpVlffR&_r=1" target="_blank" style="color: #fff; transition: 0.3s;">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://wa.me/593961956240" target="_blank" style="color: #fff; transition: 0.3s;">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+  <p style="font-size: 0.9rem; color: #ccc;">© 2025 Sacha Rimay. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Font Awesome CDN (iconos) -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/593961956240" target="_blank" style="position: fixed; bottom: 20px; right: 20px; z-index: 999; background-color: #25d366; color: white; border-radius: 50%; padding: 15px; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Botón flotante de TikTok -->
+<a href="https://www.tiktok.com/@sacharimayoficial?_t=ZM-8xgvlpVlffR&_r=1" target="_blank" style="position: fixed; bottom: 90px; right: 20px; z-index: 999; background-color: #000; color: white; border-radius: 50%; padding: 15px; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+  <i class="fab fa-tiktok"></i>
+</a>
+
+<!-- Botón flotante de Facebook -->
+<a href="https://www.facebook.com/share/1Acr7rSHpZ/" target="_blank" style="position: fixed; bottom: 160px; right: 20px; z-index: 999; background-color: #3b5998; color: white; border-radius: 50%; padding: 15px; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+  <i class="fab fa-facebook-f"></i>
+</a>
+
 </body>
 </html>
-
